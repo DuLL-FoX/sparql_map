@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Information Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+</head>
+<body>
+<div id="map"></div>
+<nav id="sidebar">
+    <div class="sidebar-toggle">Toggle Sidebar</div>
+    <h2>Country Information</h2>
+    <p>Click on a country to get information.</p>
+    <div class="close-btn">Close</div>
+</nav>
+
+
+<script src="/static/map.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.close-btn').click(function () {
+            $('#sidebar').addClass('collapsed');
+        });
+    });
+</script>
+</body>
+</html>
